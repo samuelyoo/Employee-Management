@@ -47,7 +47,7 @@ async function main(){
             {
                 name: "type",
                 type: "list",
-                message: `For person ${userCnt}/${managerData.name}`,
+                message: `Employee # ${userCnt} under ${managerData.name}`,
                 choices: ["Engineer", "Intern"]
             }
         ])
@@ -92,7 +92,7 @@ async function main(){
             team.push(new Intern(userData.name, id++, userData.email, userData.school));
         }
     }
-    const html = render(team);
+    const html = render (team)
 
     fs.writeFileSync (outputPath, html);
 }
